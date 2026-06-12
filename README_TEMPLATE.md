@@ -60,11 +60,7 @@
 
 The solution transforms data into actionable insights, enabling stakeholders to monitor business performance, identify growth opportunities, evaluate operational efficiency, and support strategic decision-making.
 
-**Problem Statement:** [To monitor revenue and order performance.
-TO identify high-value customers and retention trends.
-To evaluate product and seller effectiveness.
-To detect inventory and fulfillment risks.
-Also, to understand return behaviour and operational bottlenecks.]
+**Problem Statement:** E-commerce organizations generate large volumes of transactional data across multiple business functions. However, without a unified analytics platform, it becomes difficult to; monitor revenue and order performance, identify high-value customers and retention trends, evaluate product and seller effectiveness, detect inventory and fulfillment risks and to understand return behaviour and operational bottlenecks.
 
 **Approach:** [In 1–2 sentences - how did you tackle it?]
 
