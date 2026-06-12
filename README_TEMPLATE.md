@@ -18,9 +18,7 @@
 ---
 
 ## Table of Contents
-1. This project presents an end-to-end Executive Business Intelligence solution built in Power BI using a large-scale Amazon e-commerce dataset containing over 1 million transaction records. The dashboard was designed to provide decision-makers with a centralized view of marketplace performance across sales, customers, products, sellers, inventory, and logistics operations.
-
-The solution transforms data into actionable insights, enabling stakeholders to monitor business performance, identify growth opportunities, evaluate operational efficiency, and support strategic decision-making.(#1-project-overview)
+1. [Project Overview](#1-project-overview)
 2. [Objectives](#2-objectives)
 3. [Project Scope & Tools](#3-project-scope--tools)
 4. [Repository Structure](#4-repository-structure)
@@ -58,9 +56,15 @@ The solution transforms data into actionable insights, enabling stakeholders to 
   (Too vague. Could describe 10,000 projects. Describes none of them.)
 -->
 
-**Context:** [The business, research, or personal situation that motivated this project.]
+**Context:** This project presents an end-to-end Executive Business Intelligence solution built in Power BI using a large-scale Amazon e-commerce dataset containing over 1 million transaction records. The dashboard was designed to provide decision-makers with a centralized view of marketplace performance across sales, customers, products, sellers, inventory, and logistics operations.
 
-**Problem Statement:** [The specific question or challenge you were addressing.]
+The solution transforms data into actionable insights, enabling stakeholders to monitor business performance, identify growth opportunities, evaluate operational efficiency, and support strategic decision-making.
+
+**Problem Statement:** [To monitor revenue and order performance.
+TO identify high-value customers and retention trends.
+To evaluate product and seller effectiveness.
+To detect inventory and fulfillment risks.
+Also, to understand return behaviour and operational bottlenecks.]
 
 **Approach:** [In 1–2 sentences - how did you tackle it?]
 
