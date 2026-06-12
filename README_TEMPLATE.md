@@ -12,7 +12,7 @@
 - [ ] Data Pipeline / ETL
 - [ ] Predictive Modelling / Machine Learning
 - [ ] Data Cleaning / Wrangling
-- [ ] End-to-End (multiple of the above)
+- [Exploratory Data Analysis (EDA), Dashboard / Data Visualization] End-to-End (multiple of the above)
 - [ ] Other: ___________
 
 ---
