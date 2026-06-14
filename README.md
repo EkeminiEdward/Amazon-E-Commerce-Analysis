@@ -9,9 +9,9 @@
 -  Exploratory Data Analysis (EDA)
 - [ ] SQL Analysis / Querying
 -  Dashboard / Data Visualization
-- [ ] Data Pipeline / ETL
+-  Data Pipeline / ETL
 - [ ] Predictive Modelling / Machine Learning
-- [ ] Data Cleaning / Wrangling
+-  Data Cleaning / Wrangling
 - [ ] End-to-End (multiple of the above)
 - [ ] Other: ___________
 
@@ -37,61 +37,25 @@
 
 ## 1. Project Overview
 
-<!--
-  Write 3–5 sentences in plain language.
-  Cover: context → problem → approach → outcome.
-  Read it out loud. If it sounds like a form - rewrite it.
-
-  WHAT GOOD LOOKS LIKE:
-  "A mid-size retail business was seeing inconsistent revenue across
-  its regional stores but couldn't identify the root cause. This project
-  explored 18 months of transaction data across five regions to determine
-  whether underperformance was driven by sales volume, pricing, or return
-  rates. The analysis revealed that one region's gap was almost entirely
-  explained by an unusually high return rate on a single product category -
-  a finding invisible in the company's top-level reporting."
-
-  WHAT TO AVOID:
-  "This project analyzes sales data to find trends and insights."
-  (Too vague. Could describe 10,000 projects. Describes none of them.)
--->
-
 **Context:** This project presents an end-to-end Executive Business Intelligence solution built in Power BI using a large-scale Amazon e-commerce dataset containing over 1 million transaction records. The dashboard was designed to provide decision-makers with a centralized view of marketplace performance across sales, customers, products, sellers, inventory, and logistics operations.
 
 The solution transforms data into actionable insights, enabling stakeholders to monitor business performance, identify growth opportunities, evaluate operational efficiency, and support strategic decision-making.
 
 **Problem Statement:** E-commerce organizations generate large volumes of transactional data across multiple business functions. However, without a unified analytics platform, it becomes difficult to; monitor revenue and order performance, identify high-value customers and retention trends, evaluate product and seller effectiveness, detect inventory and fulfillment risks and to understand return behaviour and operational bottlenecks.
 
-**Approach:** [In 1–2 sentences - how did you tackle it?]
-
-**Outcome:** [What did you produce or discover?]
+**Outcome:** The final solution delivers a scalable executive reporting framework that enables leadership to monitor marketplace performance, improve operational efficiency, optimize customer retention strategies, and support data-driven decision-making across the e-commerce value chain.
 
 ---
 
 ## 2. Objectives
 
-<!--
-  Write objectives that are specific enough to succeed or fail.
-  Use action-oriented verbs: Identify, Determine, Quantify, Build, Evaluate.
-
-  WHAT GOOD LOOKS LIKE:
-  ✅ "Determine whether customer churn rate correlates with support ticket volume."
-  ✅ "Identify the top three revenue-driving product categories across all regions."
-  ✅ "Build a reproducible pipeline that ingests and cleans daily sales exports."
-
-  WHAT TO AVOID:
-  ❌ "Explore the data."
-  ❌ "Gain insights."
-  ❌ "Understand trends."
-  (These can't fail - which means they can't succeed either.)
--->
-
-- **Primary Objective:** [The main thing you set out to do]
-- **Secondary Objective 1:** [Supporting goal]
-- **Secondary Objective 2:** [Supporting goal]
-- **Secondary Objective 3:** [Remove if not applicable]
-
-> 💡 *Every analysis decision in this project traces back to one of these objectives.*
+- Analyze revenue performance across categories, locations, and sales channels.
+- Segment customers based on purchasing behaviour and value contribution.
+- Evaluate repeat purchase patterns and customer retention.
+- Assess product and seller performance.
+- Monitor inventory availability and operational efficiency.
+- Identify delivery delays and return-risk hotspots.
+- Deliver actionable insights through an executive-level dashboard experience.
 
 ---
 
@@ -99,76 +63,51 @@ The solution transforms data into actionable insights, enabling stakeholders to 
 
 ### Scope
 
-<!--
-  WHAT GOOD LOOKS LIKE:
-  In Scope: "Transaction-level data for Regions A–E, Jan 2023–Jun 2024.
-             Analysis covers revenue, return rates, and product category performance."
-  Out of Scope: "Customer demographics and marketing spend data were excluded -
-                 demographic data was incomplete for two regions, and marketing
-                 data sits in a separate system outside this engagement."
-
-  WHAT TO AVOID:
-  ❌ Leaving Out of Scope blank. This is the section that protects your credibility.
-     If you don't define the fence, reviewers assume you missed things.
--->
-
 | Dimension | Details |
 |-----------|---------|
-| **In Scope** | [What is included - data sources, time periods, segments] |
-| **Out of Scope** | [What you explicitly excluded - and a brief reason why] |
-| **Time Period** | [Date range of the data or the project itself] |
-| **Granularity** | [Unit of analysis - row-level, daily aggregates, per-user, etc.] |
+| **In Scope** | Synthetic Amazon-style e-commerce transaction dataset, with 1 million rows, 20 columns, for 5 cities in India, Mar 2024-                  Mar 2026.
+                Analysis covers revenue, return rates, payment method, product category, customer and seller performance.|
+| **Out of Scope** | Customer demographics and marketing spend data were excluded -
+                     demographic data was incomplete for two cities, and marketing
+                     data sits in a separate system outside this engagement. |
+| **Time Period** | March 2024-March 2026 |
 
 ### Tools & Technologies
 
-<!--
-  List only what you actually used on this project.
-  This is not your skills section - it's the project's technical context.
--->
 
 | Category | Tool(s) Used |
 |----------|-------------|
-| Data Storage | [e.g., PostgreSQL, CSV files, BigQuery, S3] |
-| Data Processing | [e.g., Python, R, SQL, Excel, dbt] |
-| Analysis | [e.g., pandas, dplyr, custom SQL queries] |
-| Visualization | [e.g., Matplotlib, Tableau, Power BI, Looker] |
-| Version Control | [e.g., Git / GitHub] |
-| Documentation | [e.g., Markdown, Notion] |
-| Other | [Any additional tools] |
+| Data Storage | CSV files |
+| Data Processing | Power Query |
+| Analysis | DAX |
+| Visualization | Power BI |
+| Version Control |  Git / GitHub |
+| Documentation | Markdown |
 
 ---
 
 ## 4. Repository Structure
 
 ```
-[project-root]/
+Amazon-ECommerce-PowerBI-Analytics/
 │
-├── data/
-│   ├── raw/                  # Original, unmodified source data - never edited
-│   ├── processed/            # Cleaned and transformed data
-│   └── external/             # Reference data, lookup tables, third-party files
+├── data/                  
+│   ├── ecommerce_dataset.csv
 │
-├── notebooks/                # Jupyter, R Markdown, or Colab notebooks
+├── reports/                  
+│   ├── Amazon_Ecommerce_Analytics_Executive_Intelligence_Dashboard.pbix
 │
-├── scripts/                  # Reusable .py, .R, or .sh processing files
+├── visuals/                  
+│   ├── Executive_Overview.png
+│   ├── Customer_Insights.png
+│   ├── Product_Seller_Intelligence.png
+│   ├── Operations_Delivery.png
 │
-├── queries/                  # SQL files (retain this folder for SQL-heavy projects)
-│   ├── exploratory/          # Ad-hoc or investigative queries
-│   ├── transformations/      # Cleaning and reshaping logic
-│   └── final/                # Production-ready or presentation queries
+├── documentation/            
+│   ├── Data_Model.png
 │
-├── reports/                  # Final outputs: PDFs, slide decks, Word docs
-│
-├── visuals/                  # Exported charts, dashboard screenshots, ERD diagrams
-│
-├── docs/                     # Data dictionaries, schema notes, reference material
-│
-├── project_metadata.yml      # Machine-readable metadata (optional)
-└── README.md                 # You are here
+└── README.md                 
 ```
-
-> ⚠️ *Delete folders you didn't use. An empty folder is worse than no folder.*
-> SQL-heavy projects: keep `queries/`. Analysis-only projects: keep `notebooks/`. Both? Keep both.
 
 ---
 
