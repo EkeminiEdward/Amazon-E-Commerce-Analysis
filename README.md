@@ -1,10 +1,8 @@
 # Amazon E-Commerce Analytics & Executive Intelligence Dashboard
-> *One sentence. What did you analyze, build, or solve - and why does it matter?*
 
 ---
 
 ## ⚙️ Project Type Flags
-> *Check what applies. This helps reviewers and collaborators understand the nature of the work at a glance. Delete this block before publishing.*
 
 -  Exploratory Data Analysis (EDA)
 - [ ] SQL Analysis / Querying
@@ -113,28 +111,6 @@ Amazon-ECommerce-PowerBI-Analytics/
 
 ## 5. Data Workflow
 
-<!--
-  Show how data moved through your project - from source to output.
-  Every transformation decision should be traceable here.
-
-  WHAT GOOD LOOKS LIKE:
-  1. Source: "Monthly CSV exports pulled from the internal POS system.
-              Five files, one per region, covering Jan 2023–Jun 2024."
-  2. Ingestion: "Loaded into Python using pandas. Files concatenated into
-                 a single dataframe (approx. 340,000 rows)."
-  3. Cleaning: "Removed 1.2% of rows with null transaction IDs.
-                Standardised date formats across regional files.
-                Resolved product category naming inconsistencies (3 variants → 1)."
-  4. Transformation: "Created a returns_rate field at product-category level.
-                      Aggregated to weekly and regional grain for trend analysis."
-  5. Analysis: "Descriptive statistics, regional comparison, return rate
-                segmentation by product category."
-  6. Output: "Summary report (PDF), annotated notebook, processed CSV."
-
-  WHAT TO AVOID:
-  ❌ "Data was cleaned and analysed." (No chain. No decisions. No trust.)
--->
-
 ```
 [Data Source(s)]
       ↓
@@ -147,147 +123,119 @@ Amazon-ECommerce-PowerBI-Analytics/
 [Output / Visualisation / Reporting]
 ```
 
-1. **Source:** [Where did the data come from? Format, size, access method.]
-2. **Ingestion:** [How was it brought in?]
-3. **Cleaning:** [What issues did you find and fix?]
-4. **Transformation:** [What new fields, aggregations, or structures did you create?]
-5. **Analysis:** [What methods - statistical, visual, query-based, model-based?]
-6. **Output:** [What form do the results take?]
+1. **Source:** Yearly synthetic Amazon-style E-commerce transaction dataset.
+2.             A csv file with 1 million rows and 20 columns, covering Mar 2024 - Mar 2026.
+3. **Ingestion:** Imported the csv file into Power BI, and proceeded to use the Power Query Editor to carry out data
+4.                 preparation by cleaning and transforming the data, making it ready for analysis. 
+5. **Cleaning:** Converted purchase_date column into a Date format.
+6.               Removed unnecessary errors and duplicates.
+7.               Set the data type for price, discount, final_price columns, as Decimal Number.
+8.               Set the data type for rating, shipping_time_days, stock, review_count columns, as Whole Number.
+9.               Set the data type for seller_rating, as Decimal Number (Verifying that the range is 2.5-5.0).
+10. **Transformation:** Created a dedicated Date table for trend and time intelligence analysis.
+11.                     Aggregated data to monthly and regional gains for trend analysis.
+12.                     Created dimension tables for data modelling.
+13.                     Optimized columns for reporting performance.
+14. **Analysis:** Descriptive statistics, regional comparisons, return rate by product category, top performing products,
+15.               delivery status breakdown, payment method distribution, etc.
+16. **Output:** Summary report (PDF)
 
 ---
 
 ## 6. Data Model & Schema
 
-<!--
-  Define your fields so that someone reading your analysis can follow along
-  without digging through your code.
 
-  WHAT GOOD LOOKS LIKE (one row example):
-  | transaction_id | string | Unique identifier per sales transaction | TXN-00482 |
-  | return_flag    | boolean | Whether the transaction included a return | TRUE |
-  | region_code    | string | Two-letter identifier for store region | "NE" |
-
-  WHAT TO AVOID:
-  ❌ Skipping this section because "the field names are self-explanatory."
-     They're not. Not to a reviewer. Not to you in six months.
-
-  📌 FOR SQL PROJECTS: If you have multiple tables, create one block per table.
-     Describe join keys and relationships here. Your ERD (Section 7) will
-     visualise what this section describes in text.
-
-  📌 FOR NON-SQL PROJECTS: Describe the shape of your dataset informally
-     if a formal schema doesn't apply. Even one paragraph is more helpful than nothing.
--->
-
-### Dataset / Table: `[name]`
+### Dataset / Table: `Transaction_Facts`
 
 | Field Name | Data Type | Description | Example Value |
 |------------|-----------|-------------|---------------|
-| `[field_1]` | [string / int / date / float / boolean] | [What this field represents] | [Non-sensitive example] |
-| `[field_2]` | [string / int / date / float / boolean] | [What this field represents] | [Non-sensitive example] |
-| `[field_3]` | [string / int / date / float / boolean] | [What this field represents] | [Non-sensitive example] |
+| `user_id` | string  | Unique customer identifier | U521020 |
+| `product_id` | string  | Unique product identifier | P90848 |
+| `category` | string | Top-level product category | Home |
+| `subcategory` | string | Category subdivision | Furniture |
+| `brand` | string | Product brand | Nike |
+| `price` | decimal | Original listed price | 12006.66 |
+| `discount` | decimal | Discount percentage applied | 41.83 |
+| `final_price` | decimal | Price after discount | 6984.57 |
+| `rating` | int | Product rating (1-5) | 4.4 |
+| `review_count` | int | Total reviews (log-normal distribution) | 11 |
+| `stock` | int | Available inventory units | 11 |
+| `seller_id` | [string | Unique seller identifier | S8057 |
+| `seller_rating` | decimal | Seller rating (2.5-5.0) | 2.8 |
+| `purchase_date` | date | Transaction date | Friday, August 16, 2024 |
+| `shipping_time_days` | int | Delivery time in days | 1 |
+| `location` | string | Customer city | Delhi |
+| `device` | string | Platform - Mobile/Web/Tablet | Mobile App |
+| `payment_method` | string | UPI/Card/COD | UPI |
+| `is_returned` | boolean | Return flag (True/False) | False |
+| `delivery_status` | string | Final delivery outcome | Delayed |
 
-> **Row count (approx.):** [X rows]
-> **Date range:** [Start] – [End]
-> **Key join / relationship:** [e.g., `orders.customer_id` → `customers.id`]
+### Dataset / Table: `Dim_User`
 
-*Add additional table blocks as needed for multi-table projects.*
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `user_id` | string  | Unique customer identifier | U521020 |
+| `location` | string  | Customer city | Chennai |
 
----
 
-## 7. ERD - Entity Relationship Diagram
-### *(Primarily for SQL Projects - remove this section if not applicable)*
+### Dataset / Table: `Dim_Selller`
 
-<!--
-  An ERD shows how your tables connect to each other visually.
-  It is the fastest way for a reviewer to understand the data structure
-  of a SQL project without reading every query.
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `seller_id` | string  | Unique seller identifier | S1771 |
+| `seller_rating` | decimal  | Seller rating (2.5-5.0) | 2.9 |
 
-  HOW TO INCLUDE YOUR ERD:
-  Option A - Image embed (most common):
-    Export your ERD from dbdiagram.io, DBeaver, Lucidchart, or similar.
-    Save to /visuals/erd.png and reference it below.
 
-  Option B - dbdiagram.io code block (version-controllable):
-    Paste your schema definition code directly in the fenced block below.
-    Anyone can paste it into dbdiagram.io to regenerate the visual.
+### Dataset / Table: `Dim_Product`
 
-  Option C - Mermaid diagram (renders natively in GitHub):
-    Use the mermaid code block syntax below.
-    GitHub will render this as a diagram automatically.
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `product_id` | string  | Unique product identifier | P29555 |
+| `category` | string  | Top-level product category | Beauty |
+| `subcategory` | string  | Category subdivision | Skincare |
+| `brand` | string  | Product brand | HP |
 
-  PICK ONE. Don't use all three. Delete the options you don't use.
--->
 
-### Option A - Embedded Image
-![ERD Diagram](visuals/erd.png)
-*[Brief caption: e.g., "Three-table schema - orders, customers, and products joined on shared IDs."]*
+### Dataset / Table: `Dim_Payment`
 
----
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `payment_id` | int  | Unique payment identifier | 1 |
+| `payment_method` | string  | UPI/Card/COD | UPI |
 
-### Option B - dbdiagram.io Schema Definition
-```
-Table orders {
-  order_id    int     [pk]
-  customer_id int     [ref: > customers.customer_id]
-  product_id  int     [ref: > products.product_id]
-  order_date  date
-  amount      float
-}
 
-Table customers {
-  customer_id int  [pk]
-  region_code string
-  signup_date date
-}
+### Dataset / Table: `Dim_Device`
 
-Table products {
-  product_id   int    [pk]
-  category     string
-  unit_price   float
-}
-```
-*Paste this into [dbdiagram.io](https://dbdiagram.io) to view the visual.*
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `device_id` | int  | Unique device identifier | 1 |
+| `device` | string  | Platform - Mobile/Web/Tablet | Tablet |
 
----
 
-### Option C - Mermaid Diagram *(renders on GitHub)*
-```mermaid
-erDiagram
-    ORDERS {
-        int order_id PK
-        int customer_id FK
-        int product_id FK
-        date order_date
-        float amount
-    }
-    CUSTOMERS {
-        int customer_id PK
-        string region_code
-        date signup_date
-    }
-    PRODUCTS {
-        int product_id PK
-        string category
-        float unit_price
-    }
-    ORDERS ||--o{ CUSTOMERS : "placed by"
-    ORDERS ||--o{ PRODUCTS : "contains"
-```
+
+### Dataset / Table: `Dim_Delivery`
+
+| Field Name | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|
+| `delivery_id` | int  | Unique delivery identifier | 1 |
+| `delivery_status` | string  | Final delivery outcome | Returned |
+
+
+> **Row count (approx.):** 1,000,000 rows
+> **Date range:** Sunday, March 31, 2024 – Tuesday, March 31, 2026
+> **Key join / relationship:** `Dim_User.user_id` → `Transaction_Facts.user_id`
+                                `Dim_Product.product_id` → `Transaction_Facts.product_id`
+                                `Dim_Seller.seller_id` → `Transaction_Facts.seller_id`
+                                `Dim_Device.device_id` → `Transaction_Facts.device_id`
+                                `Dim_Payment.payment_id` → `Transaction_Facts.payment_id`
+                                `Dim_Delivery.delivery_id` → `Transaction_Facts.delivery_id`
+                                `Dim_Date.date` → `Transaction_Facts.purchase_date`
+                                ( All: One-to-many, single direction relationships.)
+
 
 ---
 
-**Table Relationships Summary:**
-
-| Relationship | Join Key | Type |
-|-------------|----------|------|
-| `orders` → `customers` | `customer_id` | Many-to-One |
-| `orders` → `products` | `product_id` | Many-to-One |
-| [Add rows as needed] | | |
-
----
-
-## 8. Analysis & Metrics
+## 7. Analysis & Metrics
 
 <!--
   Explain what you measured and how - before you share what you found.
