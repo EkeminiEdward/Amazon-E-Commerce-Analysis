@@ -237,43 +237,52 @@ Amazon-ECommerce-PowerBI-Analytics/
 
 ## 7. Analysis & Metrics
 
-<!--
-  Explain what you measured and how - before you share what you found.
 
-  WHAT GOOD LOOKS LIKE:
-  Metric: "Customer Return Rate"
-  Definition: "Number of transactions flagged as returns divided by total
-               transactions, calculated at product-category and regional grain."
-  Why It Matters: "Return rate - not sales volume - was hypothesised to
-                  explain regional revenue gaps. This metric tests that hypothesis."
-
-  WHAT TO AVOID:
-  ❌ Defining a metric only in code: SUM(returns) / COUNT(transaction_id)
-     That's an implementation. Write the plain-language definition here.
-     Both belong in your project - the definition in the README,
-     the implementation in the code.
--->
 
 ### Analytical Approach
 
-[Describe how you approached the analysis. Were you exploring patterns? Testing a hypothesis? Building and validating a pipeline? Be honest about your method - exploratory work is valid, just call it that.]
+This project followed a Business Intelligence and Descriptive Analytics approach to transform raw e-commerce transaction data into actionable executive insights. The analysis focused on answering key business questions across five major areas: Revenue Perfomance, Customer Intelligence, Product & Seller Performance, Operational Efficiency, and Risk Analysis.
+
+The project moved from data preparation to data modelling to metric creation to visualization, and finally to business interpretation.
 
 ### Key Metrics Defined
 
 | Metric | Plain-Language Definition | Why It Matters |
 |--------|--------------------------|----------------|
-| `[Metric 1]` | [What it measures, in one sentence] | [What decision or question it answers] |
-| `[Metric 2]` | [What it measures, in one sentence] | [What decision or question it answers] |
-| `[Metric 3]` | [What it measures, in one sentence] | [What decision or question it answers] |
+| `Revenue` | Sum of final_price | Measures total sales generated after discounts; primary business performance KPI |
+| `Total Orders` | Count of all transaction records | Measures total purchase volume and business activity |
+| `Unique Customers` | Distinct count of user_id | Measures the unique customers acquired or served |
+| `Average Order Value (AOV)` | Revenue divided by Total Orders | Shows average customer spending per transaction |
+| `Revenue per Customer` | Revenue divided by Unique Customers | Measures average customer value contribution |
+| `Customer Segment` | Groups customers by revenue contribution | Identify High Value, Medium Value, and Low Value customers |
+| `Repeat Customers` | Customers with more than one purchase | Measures customer loyalty and retention strength |
+| `One-Time Customers` | Customers with only one purchase | Identifies acquisition without retention |
+| `Average Product Rating` | Average of product ratings | Measure customer satisfaction and product quality perception |
+| `Product Review Count` | Total product reviews | Measures product popularity and customer engagement |
+| `Seller Revenue Contribution %` | Seller Revenue divided by Revenue | Shows each seller's share of marketplace revenue |
+| `Average Seller Rating` | Average seller rating | Measures seller reliability and service quality |
+| `Revenue by Location` | Revenue grouped by location | Measures regional sales performance |
+| `Inventory Availability` | Sum of available stock | Tracks current inventory capacity |
+| `Total Returns` | Count of returned transactions | Measures return volume and operational impact |
+| `Return Rate %` | Total Returns divided by Total Orders | Measures customer dissatisfaction and product/service issues |
+| `Delivery Count` | Count of deliveries/transactions | Measures fulfillment activity |
+| `Delivered Orders` | Orders with delivered status | Measures successful order fulfillment |
+| `Delivery Success Rate %` | Delivered Orders divided by Total Orders | Evaluates logistics effectiveness |
+| `Delayed Delivery Count` | Orders exceeding delivery threshold | Identifies shipping performance problem |
+| `Average Shipping Time` | Average delivery days | Measures logistics speed and customer experience |
+| `Customer Type` | Classifies customers by purchase frequency | Separates repeat vs one-time buyers |
+| `Revenue Trend` | Revenue over time | Tracks business growth and seasonality |
+| `Purchase Frequency` | Number of purchases per customer | Measures customer engagement level |
 
 ### Methods Used
 
-- [e.g., Descriptive statistics - distribution, central tendency, outlier detection]
-- [e.g., Trend analysis across [time period]]
-- [e.g., Segmentation / group comparison by [dimension]]
-- [e.g., Correlation analysis between [variable A] and [variable B]]
-- [e.g., SQL window functions for [specific aggregation]]
-- [e.g., Custom aggregation or transformation logic in [tool]]
+- Descriptive statistics - distribution analysis, comparative analysis.
+- Trend analysis across March 2024 - March 2026.
+- Segmentation analysis / group comparison by High Value, Medium Value, and Low Value.
+- Retention analysis - repeat customer classification, purchase frequency analysis.
+- Pewrformance analysis - product performance, seller performance, delivery performance.
+- Inventory analysis - stock aggregation, target comparison.
+- Return risk analysis - return rate calculation, location analysis, device analysis, heatmap visualization.
 
 ---
 
