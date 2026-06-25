@@ -321,6 +321,7 @@ The seller with seller_id S4656, sold an electronic product and got a rating of 
 | Customer Insights | Focuses on customer behaviour and retention. | visuals/Customer Insights.png |
 | Product & Seller Intelligence | Analyzes marketplace performance. | visuals/Product & Seller Intelligence.png |
 | Operations & Delivery Report | Monitors fulfillment and operational performance. | visuals/Operations & Delivery Report.png |
+| Data Model | A Star schema data model was implemented |  |
 
 ---
 
