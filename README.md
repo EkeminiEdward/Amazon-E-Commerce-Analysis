@@ -336,7 +336,7 @@ The seller with seller_id S4656, sold an electronic product and got a rating of 
 | Deliverable | Description | Location |
 |-------------|-------------|----------|
 | Amazon E-Commerce Executive Overview | Contains a high-level view of business performance. | [`/path/to/file`] |
-| Customer Insights | Focuses on customer behaviour and retention. | [`/path/to/file`] |
+| Customer Insights | Focuses on customer behaviour and retention. | visuals/Customer Insights.png |
 | Product & Seller Intelligence | Analyzes marketplace performance. | [`/path/to/file`] |
 | Operations & Delivery Report | Monitors fulfillment and operational performance. | [`/path/to/file`] |
 
