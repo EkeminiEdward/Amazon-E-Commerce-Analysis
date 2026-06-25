@@ -286,137 +286,66 @@ The project moved from data preparation to data modelling to metric creation to 
 
 ---
 
-## 9. Key Insights
+## 8. Key Insights
 
-<!--
-  Findings + implications. Not just what happened - what it means.
 
-  WHAT GOOD LOOKS LIKE:
-  ✅ "Return rates, not sales volume, explain Region A's underperformance.
-      Region A's return rate on home goods was 34% - more than double the
-      company average. Revenue was not lost at the point of sale; it was
-      lost post-sale through refunds. This points to a fulfilment or
-      product quality issue specific to that region, not a demand problem."
+**Insight 1: Return Rates, not sales volume, explain the underperformnce in Hyderabad, Chennai and Bangalore**
+These three cities (Hyderabad, Chennai, Bangalore) had return rates of 36.05%, 36.32% and 36.35% respectively - more than the company average of 35.04%. Revenue was not lost at the point of sale; it was lost post-sale through refunds. This points to a fulfillment or product quality issue specific to these cities, not a demand problem.
 
-  WHAT TO AVOID:
-  ❌ "Region A had lower revenue than other regions in Q4."
-     (That's an observation. It describes what happened.
-      An insight says what it means and where to look next.)
+**Insight 2: Highest-performing product category**
+Electronics, had the best performance in the product category, with highest revenue of $6.5 billion. The business may have dependency risk. While Clothing had worst performance in the product category, with a revenue of $329 thousand.
 
-  Aim for 3–6 insights. Quality over quantity.
--->
 
-**Insight 1: [Short descriptive headline]**
-[What you found + what it suggests. One short paragraph.]
+**Insight 3: Customer groups that drive revenue**
+Customers were grouped into three groups - High Value, Medium Value, Low Value - based on revenue contribution.
+The report identifies that High-Value customers drive the most revenue, with of revenue of $4.7 billion. 
 
-**Insight 2: [Short descriptive headline]**
-[What you found + what it suggests.]
+**Insight 4: Customer retention**
+Repeat Customers and One-Time Customers were the two measures used to show whether revenue is supported by loyalty or acquisition.
+High repeat customer percentage indicates; strong customer experience, product satisfaction, trust in marketplace.
+The report identifies that the repeat customers had the highest percentage (57.08%) compared to the one-time customers' percentage of 42.92%.
 
-**Insight 3: [Short descriptive headline]**
-[What you found + what it suggests.]
 
-**Insight 4 (if applicable): [Short descriptive headline]**
-[What you found + what it suggests.]
+**Insight 5: Product performance analysis**
+The product performance was grouped into four groups; High Rating + High Revenue = Best products, High Rating + Low Revenue = Marketing Opportunity products, Low Rating + High Revenue = Quality Risk products, and Low Rating + Low Revenue = Product Improvement candidate.
+A Samsung product, under the electronics category with the product_id P46010, had a high rating of 4.07 and a high revenue of $456 thousand, which made it to be the best product. A Lenovo product, in the sports category with the product_id P96839, had high rating of 4.50 and a low revenue of $48 thousand, which shows that it has a marketing opportunity. A Lenovo product, in the clothing category with a product_id P75806, had a low rating of 3.77 and a high revenue of $377 thousand, and that made it to be a quality risk product. Finally, another Samsung product in the electronics category with a aproduct_id P68624, had a low rating of 2.85 and a low revenue of $14 thousand, and that made it to be a product improvement candidate.
+
+
+**Insight 6: Top revenue-generating sellers**
+A seller with high revenue but poor rating represents marketplace risk. A highly rated seller with low revenue represents growth potential.
+The seller with seller_id S4656, sold an electronic product and got a rating of 2.60 but made revenue of $670 thousand. That points to the fact that there might be a marketplace risk. Another seller with seller_id S7251, sold a home product and got a rating of 5.00 but made revenue of $60 thousand. This shows that there is a growth potential in that seller.
 
 ---
 
-## 10. Recommendations
+## 9. Recommendations
 
-<!--
-  Action-oriented. Addressed to a real audience.
-  Tied explicitly to the insight that supports each one.
-
-  WHAT GOOD LOOKS LIKE:
-  Priority: High
-  Recommendation: "Conduct a fulfilment audit for home goods deliveries
-                   in Region A - specifically investigating whether returns
-                   correlate with a particular warehouse, carrier, or SKU batch."
-  Based On: Insight 1 - return rate anomaly in Region A
-  Owner: Operations / Supply Chain team
-
-  WHAT TO AVOID:
-  ❌ "Improve the return rate."
-     (Not actionable. Doesn't say who, how, or where to start.)
-  ❌ "Further analysis is needed."
-     (This is a placeholder, not a recommendation.)
--->
 
 | Priority | Recommendation | Based On | Suggested Owner |
 |----------|---------------|----------|-----------------|
-| High | [Specific, actionable step] | [Insight it comes from] | [Who should act] |
-| Medium | [Specific, actionable step] | [Insight it comes from] | [Who should act] |
-| Low | [Exploratory or longer-term suggestion] | [Insight it comes from] | [Who should act] |
+| High | Analyze: Top returned products, Seller contribution, Category patterns. | Insight 1 - return rate anomalyin Hyderbad, Chennai and Bangalore. | Operations |
+| Medium | Strengthen High-Performing category (Electronics) by prioritizing; inventory availabilty, marketing campaigns and seller allocation. | Insight 2 - best performing product category. | Operations |
+| Medium | Create a VIP retention strategy: For High Value customers; exclusive offers, loyalty benefits, early access campaigns. This approach will increase lifetime value and reduce churn risk. Also, move Medium Value customers into High Value customers through; bundled offers, cross-selling and personalized recommendations. | Insight 3 - customer groups that drive revenue. | Operations |
+| High | Improve retention by; monitoring repeat purchase cycles, sending product recommendations, improving customer service response time, and reducing return rates. | Insight 4 - customer retention. | Operations |
+| High | For Star products, increase; inventory, advertising, and seller visibility. For Quality risk products, investigate; product defects, customer expectations, and description accuracy, because these products may generate revenue now but damage long-term trust. For Marketing opportunity products, improve; search ranking, promotions, and product visibility. | Insight 5 - product performance analysis  | Operations |
+| High | For sellers with marketplace risk, apply; quality monitoring, customer complaint review, and performance improvement plans. For sellers with growth potential, support with; better product placement, promotional visibility, and increased traffic allocation. | Insight 6 - top revenue-generating sellers | Operations |
 
 ---
 
-## 11. Assumptions & Limitations
-
-<!--
-  WHAT GOOD LOOKS LIKE:
-  Assumption: "Transaction records were assumed to be complete for all five regions.
-               No validation was performed against source system record counts."
-  Limitation: "The analysis cannot distinguish between returns initiated by
-               the customer vs. returns initiated by the business (e.g., recalls).
-               If business-initiated returns are concentrated in Region A, the
-               return rate finding may reflect a policy decision, not a quality issue."
-
-  WHAT TO AVOID:
-  ❌ Leaving this section blank or writing "None known."
-     Every project has limitations. Documenting them is a sign of
-     analytical maturity - not a confession of failure.
--->
-
-### Assumptions
-- [What did you treat as true without being able to verify?]
-- [What simplifications did you make for scope or feasibility?]
-- [What domain rules or definitions did you accept as given?]
-
-### Limitations
-- [What gaps exist in the data?]
-- [What analysis was out of scope but could affect interpretation?]
-- [What would a more rigorous version of this project include?]
-- [Are there known biases in the data source or collection method?]
-
-> *The goal here is pre-emptive Q&A. What would a thoughtful skeptic push back on? Document the answer here, before they ask.*
-
----
-
-## 12. Future Enhancements
-
-<!--
-  WHAT GOOD LOOKS LIKE:
-  ✅ "Automate the monthly data pull from the POS export folder using
-      a scheduled Python script, replacing the current manual process."
-  ✅ "Expand the return rate analysis to include carrier-level data,
-      which was unavailable in this dataset but exists in the logistics system."
-
-  WHAT TO AVOID:
-  ❌ "Add a machine learning model."
-     (Vague, and disconnected from the actual findings of this project.)
-  ❌ Listing aspirational features that don't follow logically from the work.
--->
-
-- [ ] [Enhancement 1 - specific and traceable to a real gap in this project]
-- [ ] [Enhancement 2]
-- [ ] [Enhancement 3]
-- [ ] [Enhancement 4]
-
----
-
-## 13. Deliverables
+## 10. Deliverables
 
 | Deliverable | Description | Location |
 |-------------|-------------|----------|
-| [Name] | [What it contains] | [`/path/to/file`] |
-| [Name] | [What it contains] | [`/path/to/file`] |
-| [Name] | [What it contains] | [`/path/to/file`] |
+| Amazon E-Commerce Executive Overview | Contains a high-level view of business performance. | [`/path/to/file`] |
+| Customer Insights | Focuses on customer behaviour and retention. | [`/path/to/file`] |
+| Product & Seller Intelligence | Analyzes marketplace performance. | [`/path/to/file`] |
+| Operations & Delivery Report | Monitors fulfillment and operational performance. | [`/path/to/file`] |
 
 ---
 
-## 14. Author
+## 11. Author
 
-**[Your Name]**
-[Your role or title - current or target]
+**Ekemini Edward**
+Data Analyst
 
 - 🔗 [LinkedIn URL]
 - 💼 [Portfolio or GitHub profile URL]
