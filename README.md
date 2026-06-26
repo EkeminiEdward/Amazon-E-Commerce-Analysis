@@ -331,7 +331,7 @@ The seller with seller_id S4656, sold an electronic product and got a rating of 
 Data Analyst
 
 - 🔗 www.linkedin.com/in/ekemini-edward-052b5157
-- 💼 [Portfolio or GitHub profile URL]
+- 💼 https://github.com/EkeminiEdward/EkeminiEdward.github.io.git
 - 📧 edyswagg@gmail.com
 
 ---
