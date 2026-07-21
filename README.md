@@ -334,7 +334,5 @@ Data Analyst
 - 💼 https://github.com/EkeminiEdward/EkeminiEdward.github.io.git
 - 📧 edyswagg@gmail.com
 
----
+*Last updated: June 2026*
 
-*Last updated: [Month YYYY]*
-*If this template helped you, consider starring the repository.*
