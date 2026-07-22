@@ -262,7 +262,7 @@ The project moved from data preparation to data modelling to metric creation to 
 - Trend analysis across March 2024 - March 2026.
 - Segmentation analysis / group comparison by High Value, Medium Value, and Low Value.
 - Retention analysis - repeat customer classification, purchase frequency analysis.
-- Pewrformance analysis - product performance, seller performance, delivery performance.
+- Performance analysis - product performance, seller performance, delivery performance.
 - Inventory analysis - stock aggregation, target comparison.
 - Return risk analysis - return rate calculation, location analysis, device analysis, heatmap visualization.
 
