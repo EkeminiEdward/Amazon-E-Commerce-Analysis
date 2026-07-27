@@ -13,6 +13,20 @@
 - [ ] End-to-End (multiple of the above)
 - [ ] Other: ___________
 
+
+## Table of Contents
+1. [Project Overview](#1-project-overview)
+2. [Objectives](#2-objectives)
+3. [Project Scope & Tools](#3-project-scope--tools)
+4. [Repository Structure](#4-repository-structure)
+5. [Data Workflow](#5-data-workflow)
+6. [Data Model & Schema](#6-data-model--schema)
+7. [Analysis & Metrics](#7-analysis--metrics)
+8. [Key Insights](#8-key-insights)
+9. [Recommendations](#9-recommendations)
+10. [Future Enhancements](#10-deliverabales)
+11. [Author](#11-author)
+
 ---
 
 ## 1. Project Overview
