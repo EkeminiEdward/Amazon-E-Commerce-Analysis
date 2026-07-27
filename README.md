@@ -24,7 +24,7 @@
 7. [Analysis & Metrics](#7-analysis--metrics)
 8. [Key Insights](#8-key-insights)
 9. [Recommendations](#9-recommendations)
-10. [Future Enhancements](#10-deliverabales)
+10. [Deliverables](#10-deliverabales)
 11. [Author](#11-author)
 
 ---
